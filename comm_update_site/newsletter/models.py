@@ -16,12 +16,17 @@ class Newsletter(models.Model):
     def get_absolute_url(self):
         return reverse('newsletter_detail', kwargs={'slug': self.slug})
 
+    def get_events(self):
+        return self.events
+
+    def get_achievements(self):
+        return self.achievemnts
+
     def __str__(self):
         return "{0} - {1}".format(self.title, self.date)
 
 
 class SectionAbstract(models.Model):
-
     title = models.CharField(verbose_name='Title', max_length=140)
     text = models.TextField(verbose_name='text', blank=True)
 
@@ -36,8 +41,8 @@ class AchievementNewslettter(models.Model):
     """
     Through class to handle relationship between Achievement and Newsletter models.
     """
-    newsletter = models.ForeignKey('Newsletter', related_name='newsletter_achievement', on_delete=models.CASCADE)
     achievement = models.ForeignKey('Achievement', on_delete=models.CASCADE)
+    newsletter = models.ForeignKey('Newsletter', related_name='newsletter_achievement', on_delete=models.CASCADE)
     order = models.PositiveSmallIntegerField()
 
     class Meta:
@@ -48,9 +53,11 @@ class AchievementNewslettter(models.Model):
 
 
 class Achievement(SectionAbstract):
-
     image = FileBrowseField('Image', max_length=100, directory="achievements",
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    newsletters = models.ManyToManyField(
+        'Newsletter', verbose_name="Newsletter",
+        through=AchievementNewslettter, related_name='achievemnts', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Achievement'
@@ -76,11 +83,6 @@ class Event(SectionAbstract):
     date = models.DateField(verbose_name='Date')
     image = FileBrowseField('Image', max_length=100, directory="events",
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
-
-
-
-
-
-
-
-
+    newsletters = models.ManyToManyField(
+        'Newsletter', verbose_name="Newsletter",
+        through=EventNewslettter, related_name='events', null=True, blank=True)

@@ -1,0 +1,162 @@
+<td align="center" valign="top"
+    style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+    <!-- BEGIN BODY // -->
+    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody"
+           style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;border-top: 0;border-bottom: 0;">
+        <tbody>
+        <!-- BEGIN POST BLOCK // -->
+        {% for achievement in achievements %}
+            <tr mc:repeatable="repeat_1" mc:repeatindex="0">
+                <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <table border="0" cellspacing="0" cellpadding="0"
+                           style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <tbody>
+                        {% if forloop.first %}
+                        <tr>
+                            {% include "common/headline.html" with title="Achievements" %}
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td valign="top" class="bodyContainer"
+                                style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF !important;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageCardBlock"
+                                       style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <tbody class="mcnImageCardBlockOuter">
+                                    <tr>
+                                        <td class="mcnImageCardBlockInner" valign="top"
+                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;width: 600px !important;max-width: 100% !important;overflow: hidden !important;white-space: nowrap !important;">
+
+
+                                                                                        <span style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                                                            <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6b2b3eeca79a80926667ec71b01eac12&auto=format&fit=crop&w=1350&q=80"
+                                                                                                 alt="" border="0"
+                                                                                                 style="margin: 0;padding: 0;width: 100%;max-width: 100%;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
+                                                                                                 class="mcnImage mainImage">
+                                                                                        </span>
+
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                       class="mcnTextBlock mcnTextBlockWhite"
+                                       style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF !important;">
+                                    <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner"
+                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="600"
+                                                   class="mcnTextContentContainer"
+                                                   style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <tbody>
+                                                <tr>
+
+                                                    <td valign="top" class="mcnTextContent"
+                                                        style="padding-top: 50px;padding-right: 50px;padding-bottom: 29px;padding-left: 50px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #555555;font-family: 'Roboto', Arial, sans-serif;font-size: 16px;line-height: 150%;text-align: left;font-weight: 300;">
+                                                        <h2 class="null"
+                                                            style="margin: 0 0 1em;padding: 0;display: block;font-family: 'Roboto', Arial, sans-serif;font-size: 20px;font-style: normal;font-weight: 500;line-height: 125%;letter-spacing: -0.04em;text-align: left;color: #15485F !important;">
+                                                            <h2 style="text-align: center">{{ achievement.title }}</h2>
+                                                            <p style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #15485F !important;font-weight: 500 !important;text-decoration: none !important;">
+                                                                {{ achievement.text|safe }}
+                                                            </p>
+                                                        </h2>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        {% endfor %}
+
+
+        {% for event in events %}
+            <tr mc:repeatable="repeat_1" mc:repeatindex="2">
+                <td style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                    <table border="0" cellspacing="0" cellpadding="0"
+                           style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                        <tbody>
+                        {% if forloop.first %}
+                        <tr>
+                            {% include "common/headline.html" with title='Events' %}
+                        </tr>
+                        {% endif %}
+                        <tr>
+                            <td valign="top" class="bodyContainer"
+                                style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF !important;">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                       class="mcnTextBlock mcnTextBlockWhite"
+                                       style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #FFFFFF !important;">
+                                    <tbody class="mcnTextBlockOuter">
+                                    <tr>
+                                        <td valign="top" class="mcnTextBlockInner"
+                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+
+                                            <table align="left" border="0" cellpadding="0" cellspacing="0" width="600"
+                                                   class="mcnTextContentContainer"
+                                                   style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <tbody>
+                                                <tr>
+                                                    <td valign="top" class="mcnTextContent"
+                                                        style="padding-top: 50px;padding-right: 50px;padding-bottom: 29px;padding-left: 50px;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #555555;font-family: 'Roboto', Arial, sans-serif;font-size: 16px;line-height: 150%;text-align: left;font-weight: 300;">
+                                                        <h2 style="text-align: left">{{ event.title }}</h2>
+                                                        <small>{{ event.date }}</small>
+                                                        <h2 class="null"
+                                                            style="margin: 0 0 1em;padding: 0;display: block;font-family: 'Roboto', Arial, sans-serif;font-size: 20px;font-style: normal;font-weight: 500;line-height: 125%;letter-spacing: -0.04em;text-align: left;color: #15485F !important;">
+                                                            <p style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #15485F !important;font-weight: 500 !important;text-decoration: none !important;">
+                                                                {{ event.text|safe }}
+                                                            </p>
+                                                        </h2>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnImageCardBlock"
+                                       style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                    <tbody class="mcnImageCardBlockOuter">
+                                    <tr>
+                                        <td class="mcnImageCardBlockInner" valign="top"
+                                            style="mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;width: 600px !important;max-width: 100% !important;overflow: hidden !important;white-space: nowrap !important;">
+
+
+                                            <div style="word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+                                                <img src="https://images.unsplash.com/photo-1533727937480-da3a97967e95?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=59e498f5b7ac8ff18ba97532c5870362&auto=format&fit=crop&w=1351&q=80"
+                                                     alt="" border="0"
+                                                     style="margin: 0;padding: 0;width: 100%;max-width: 100%;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;"
+                                                     class="mcnImage mainImage">
+                                            </div>
+
+
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+
+
+                        </tbody>
+                    </table>
+                </td>
+
+
+            </tr>
+        {% endfor %}

@@ -124,3 +124,25 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+FILEBROWSER_VERSIONS_BASEDIR = '_versions'
+FILEBROWSER_VERSIONS = {
+    'mobile': {
+        'verbose_name': 'Mobile format',
+        'width': 768,
+        'height': 540,
+        'opts': 'crop',
+    },
+    'admin_thumbnail': {
+        'verbose_name': 'Admin Thumbnail',
+        'width': 100,
+        'height': 75,
+        'opts': 'crop',
+        'filter_model': ('',)
+    },
+}
+
+FILEBROWSER_ADMIN_VERSIONS = FILEBROWSER_VERSIONS.keys()
+FILEBROWSER_ADMIN_THUMBNAIL = 'admin_thumbnail'
+FILEBROWSER_DIRECTORY = ''
