@@ -1,8 +1,9 @@
 from django.db import models
 from filebrowser.fields import FileBrowseField
+from django.urls import reverse
+from autoslug import AutoSlugField
 
 
-# Create your models here.
 class Newsletter(models.Model):
     title = models.CharField(verbose_name="Title", max_length=255)
     date = models.DateField(verbose_name='Date')
@@ -10,6 +11,10 @@ class Newsletter(models.Model):
     text = models.TextField(verbose_name='text', blank=True)
     image = FileBrowseField('Image', max_length=100, directory="flags",
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    slug = AutoSlugField(populate_from='title')
+
+    def get_absolute_url(self):
+        return reverse('newsletter_detail', kwargs={'slug': self.slug})
 
     def __str__(self):
         return "{0} - {1}".format(self.title, self.date)

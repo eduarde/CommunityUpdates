@@ -23,4 +23,5 @@ urlpatterns = [
     url(r'^grappelli/', include('grappelli.urls')),
     path('admin/filebrowser/', site.urls),
     url(r'^tinymce/', include('tinymce.urls')),
+    url(r'^', include('comm_update_site.newsletter.urls')),
 ]

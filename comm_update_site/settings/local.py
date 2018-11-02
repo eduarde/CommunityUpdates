@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'autoslug',
     'tinymce',
     'comm_update_site.newsletter',
 ]
