@@ -44,13 +44,38 @@ class AchievementNewslettter(models.Model):
 
 class Achievement(SectionAbstract):
 
-    image = FileBrowseField('Image', max_length=100, directory="achievement",
+    image = FileBrowseField('Image', max_length=100, directory="achievements",
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
 
     class Meta:
         verbose_name = 'Achievement'
         verbose_name_plural = 'Achievements'
 
-        
+
+class EventNewslettter(models.Model):
+    """
+    Through class to handle relationship between Event and Newsletter models.
+    """
+    newsletter = models.ForeignKey('Newsletter', related_name='newsletter_event', on_delete=models.CASCADE)
+    event = models.ForeignKey('Event', on_delete=models.CASCADE)
+    order = models.PositiveSmallIntegerField()
+
+    class Meta:
+        app_label = 'newsletter'
+        verbose_name = 'Event newsletter'
+        verbose_name_plural = 'Events newsletter'
+        ordering = ('order',)
+
+
+class Event(SectionAbstract):
+    date = models.DateField(verbose_name='Date')
+    image = FileBrowseField('Image', max_length=100, directory="events",
+                            extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+
+
+
+
+
+
 
 
