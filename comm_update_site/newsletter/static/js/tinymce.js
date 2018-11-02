@@ -44,11 +44,11 @@ tinyMCE.init({
     },
 
     // Init
-    //  mode: 'textareas',
+    mode: 'textareas',
 // # deactivating as it puts the widget on every single textarea
     theme: 'advanced',
     skin: 'grappelli',
-    selector: '#newsletter_form textarea',
+    selector: '#newsletter_form textarea, #achievement_form textarea, #newsletter_item0 textarea',
 
 
     // General

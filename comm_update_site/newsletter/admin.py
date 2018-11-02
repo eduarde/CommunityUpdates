@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Newsletter, Achievement
-from django.templatetags.static import static
+from .models import Newsletter, Achievement, AchievementNewslettter
+from grappelli.forms import GrappelliSortableHiddenMixin
 
 
 class TinyMCEMixin(object):
@@ -15,13 +15,17 @@ class TinyMCEMixin(object):
         ]
 
 
-class AchievementsInline(TinyMCEMixin, admin.TabularInline):
+class AchievementsInline(GrappelliSortableHiddenMixin, admin.TabularInline):
     verbose_name = 'Achievement'
     verbose_name_plural = 'Achievements'
-    model = Achievement
-    # form = autocomplete_forms.modelform_factory(ChapterAccordion)
-    # sortable_field_name = "order"
+    model = AchievementNewslettter
+    sortable_field_name = "order"
     extra = 0
+
+
+class AchievementsAdmin(TinyMCEMixin, admin.ModelAdmin):
+    model = Achievement
+    list_display = ('title',)
 
 
 class NewsletterAdmin(TinyMCEMixin, admin.ModelAdmin):
@@ -34,3 +38,4 @@ class NewsletterAdmin(TinyMCEMixin, admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Newsletter, NewsletterAdmin)
+admin.site.register(Achievement, AchievementsAdmin)
