@@ -1,3 +1,8 @@
-.idea
+*.pyc
+/.cache
+/.idea
 email.html
 email2.html
+comm_update_site/settings/local.py
+comm_update_site/settings/prod.py
+db.sqlite3
