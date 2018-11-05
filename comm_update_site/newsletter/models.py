@@ -13,6 +13,7 @@ class Newsletter(models.Model):
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
     slug = AutoSlugField(populate_from='title')
     virtual_tour_link = models.URLField(verbose_name='URL Virtual Tour', blank=True)
+    thank_you_text = models.TextField(verbose_name='Special thank you message', blank=True)
 
     def get_absolute_url(self):
         return reverse('newsletter_detail', kwargs={'slug': self.slug})
@@ -90,12 +91,27 @@ class Event(SectionAbstract):
         through=EventNewslettter, related_name='events', null=True, blank=True)
 
 
+class MemberNewsletter(models.Model):
+    newsletter = models.ForeignKey('Newsletter', related_name='newsletter_member', on_delete=models.CASCADE)
+    member = models.ForeignKey('Member', on_delete=models.CASCADE)
+    order = models.PositiveSmallIntegerField()
+
+    class Meta:
+        app_label = 'newsletter'
+        verbose_name = 'Member newsletter'
+        verbose_name_plural = 'Members newsletter'
+        ordering = ('order',)
+
+
 class Member(models.Model):
     first_name = models.CharField(verbose_name='First Name', max_length=100)
     last_name = models.CharField(verbose_name='Last Name', max_length=140)
     photo = FileBrowseField('Photo', max_length=100, directory="photo",
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
     profile_url = models.URLField(verbose_name='UCern Profile URL', blank=True)
+    newsletters = models.ManyToManyField(
+        'Newsletter', verbose_name="Newsletter",
+        through=MemberNewsletter, related_name='member', null=True, blank=True)
 
     @property
     def full_name(self):
@@ -103,5 +119,3 @@ class Member(models.Model):
 
     def __str__(self):
         return self.full_name
-
-

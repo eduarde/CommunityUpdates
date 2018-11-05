@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-    <title>eHouse Blend | issue 09</title>
+    <title>Community Updates</title>
     <style type="text/css">
         div, p, a, li, td {
             -webkit-text-size-adjust: none;
@@ -75,6 +75,22 @@
         .img120 img {
             width: 120px;
             height: auto;
+        }
+
+        .profile {
+            filter: grayscale(100%);
+            height: 100px;
+            width: 100px;
+            margin: auto auto;
+            background-color: #F1F1F1;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile:hover {
+            filter: grayscale(0%);
         }
 
         .image176 img {
@@ -440,6 +456,8 @@
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix">
 
 <div class="ui-sortable" id="sort_them" style="border-color: rgb(33, 41, 51);">
+
+    {# -----------   HEADER module  -----------  #}
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#212528"
            style="border-color: rgb(33, 41, 51); background-color: rgb(33, 41, 51);table-layout: fixed;">
         <tbody>
@@ -673,10 +691,11 @@
         </tr>
         </tbody>
     </table>
+    {# -----------  END OF HEADER module  -----------  #}
 
     <div style="display: none;" id="element_08740461899433285"></div>
 
-    {# HEADER !!        #}
+    {# -----------   INTRO module  -----------  #}
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#ffffff"
            style="position: relative; z-index: 0; background-color: rgb(255, 255, 255);">
         <tbody>
@@ -906,7 +925,9 @@
         </tr>
         </tbody>
     </table>
-    {#    Achievements !!    #}
+    {# -----------  END OF INTRO module  -----------  #}
+
+    {# -----------   ACHIEVEMENTS module  -----------  #}
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#f7f5f5"
            style="position: relative; z-index: 0; border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">
         <tbody>
@@ -1092,8 +1113,9 @@
         </tr>
         </tbody>
     </table>
+    {# -----------  END OF ACHIEVEMENTS module  -----------  #}
 
-    {#    News !!    #}
+    {# -----------   EVENTS module  -----------  #}
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#f7f5f5"
            style="position: relative; z-index: 0; border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">
         <tbody>
@@ -1275,6 +1297,7 @@
         </tr>
         </tbody>
     </table>
+    {# ----------- END OF EVENTS ----------- #}
 
     <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#f7f5f5"
            style="position: relative; z-index: 0; border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">
@@ -1586,8 +1609,7 @@
                                                     <td valign="middle" width="100%"
                                                         style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 24px; color: #ffffff; line-height: 30px; font-weight: 700; text-transform: uppercase;"
                                                         class="fullCenter" cu-identify="element_06716610281728208"
-                                                        mc:edit="85">Have a project in mind?&nbsp;
-                                                        <br>We’d love to help.
+                                                        mc:edit="85">Special Thank You
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -1617,16 +1639,89 @@
                                                     <td valign="middle" width="100%"
                                                         style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; color: #ffffff; line-height: 24px; font-weight: 400;"
                                                         class="fullCenter" cu-identify="element_09165527303703129"
-                                                        mc:edit="86">We believe great user experiences are an essential
-                                                        part of a successful brand and we develop a collaborative client
-                                                        relationship that produces exceptional results.
+                                                        mc:edit="86">{{ newsletter.thank_you_text|safe }}
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td width="100%" height="45"></td>
                                                 </tr>
+                                                <tr>
+                                                    <td valign="middle" width="100%" class="image34">
+
+                                                        <table width="170" border="0" cellpadding="0" cellspacing="0"
+                                                               align="left"
+                                                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
+                                                               class="buttonScale">
+                                                            <tbody>
+                                                            <tr>
+
+                                                                <table cellspacing="0" cellpadding="0"
+                                                                       border="0"
+                                                                       style="width:100%;  max-width:800px; overflow-x: auto; padding-left: 20px">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td style="display:inline-block;padding:20px;">
+                                                                            <div class="profile"
+                                                                                 style="background-image: url('https://images.unsplash.com/photo-1525450280520-7d542a86e065?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4259c07277dbffd4dbef268e24ab7998&auto=format&fit=crop&w=1350&q=80'); box-shadow: 0 0 0 0.5em rgba(255, 250, 250, 0.1);"></div>
+                                                                        </td>
+
+                                                                        <td style="display:inline-block;padding:20px;">
+                                                                            <div class="profile"
+                                                                                 style="background-image: url('https://images.unsplash.com/photo-1521572267360-ee0c2909d518?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6de094989d0cf912f189ad8b7322d6d2&auto=format&fit=crop&w=634&q=80'); box-shadow: 0 0 0 0.5em rgba(255, 250, 250, 0.1);"></div>
+                                                                        </td>
+
+                                                                        <td style="display:inline-block;padding:20px;">
+                                                                            <div class="profile"
+                                                                                 style="background-image: url('https://images.unsplash.com/photo-1521587765099-8835e7201186?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c027768ca5e582698906cf05ab64ce7d&auto=format&fit=crop&w=634&q=80'); box-shadow: 0 0 0 0.5em rgba(255, 250, 250, 0.1);"></div>
+                                                                        </td>
+
+                                                                        <td style="display:inline-block;padding:20px;">
+                                                                            <div class="profile"
+                                                                                 style="background-image: url('https://images.unsplash.com/photo-1520223297779-95bbd1ea79b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5586e47ae5f95d6efc6518a223a36d8b&auto=format&fit=crop&w=1266&q=80'); box-shadow: 0 0 0 0.5em rgba(255, 250, 250, 0.1);"></div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                                {#                                                                </td>#}
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
                                                 </tbody>
                                             </table>
+                                            <!-- End Wrapper -->
+
+                                            {#                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"#}
+                                            {#                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"#}
+                                            {#                                       class="fullCenter" object="drag-module-small">#}
+                                            {#                                    <!----------------- Button Center ----------------->#}
+                                            {#                                    <tbody>#}
+                                            {#                                    <tr>#}
+                                            {#                                        <td align="center">#}
+                                            {##}
+                                            {#                                            <table border="0" cellpadding="0" cellspacing="0" align="center">#}
+                                            {#                                                <tbody style="border-color: rgb(182, 114, 225);">#}
+                                            {#                                                <tr style="border-color: rgb(182, 114, 225);">#}
+                                            {#                                                    <td align="center" height="34" bgcolor="#eb3b4a"#}
+                                            {#                                                        style="border-radius: 3px; padding-left: 20px; padding-right: 20px; letter-spacing: 1px; font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: rgb(255, 255, 255); text-transform: uppercase; border-color: rgb(182, 114, 225); background-color: rgb(182, 114, 225);font-size:12px;"#}
+                                            {#                                                        mc:edit="87">#}
+                                            {##}
+                                            {#                                                        <a cu-identify="element_05755561622790992"#}
+                                            {#                                                           href="http://www.ehousestudio.com/contact"#}
+                                            {#                                                           style="color: #ffffff; font-size: 12px; text-decoration: none; line-height: 30px; width: 100%;">Get#}
+                                            {#                                                            Started</a>#}
+                                            {#                                                    </td>#}
+                                            {#                                                </tr>#}
+                                            {#                                                </tbody>#}
+                                            {#                                            </table>#}
+                                            {##}
+                                            {#                                        </td>#}
+                                            {#                                    </tr>#}
+                                            {#                                    <!----------------- End Button Center ----------------->#}
+                                            {#                                    </tbody>#}
+                                            {#                                </table>#}
 
                                         </td>
                                     </tr>
@@ -1634,52 +1729,17 @@
                                 </table>
                                 <!-- End Wrapper -->
 
-                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                       class="fullCenter" object="drag-module-small">
-                                    <!----------------- Button Center ----------------->
+                                <!-- Space -->
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
+                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
+                                       class="full">
                                     <tbody>
                                     <tr>
-                                        <td align="center">
-
-                                            <table border="0" cellpadding="0" cellspacing="0" align="center">
-                                                <tbody style="border-color: rgb(182, 114, 225);">
-                                                <tr style="border-color: rgb(182, 114, 225);">
-                                                    <td align="center" height="34" bgcolor="#eb3b4a"
-                                                        style="border-radius: 3px; padding-left: 20px; padding-right: 20px; letter-spacing: 1px; font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: rgb(255, 255, 255); text-transform: uppercase; border-color: rgb(182, 114, 225); background-color: rgb(182, 114, 225);font-size:12px;"
-                                                        mc:edit="87">
-
-                                                        <a cu-identify="element_05755561622790992"
-                                                           href="http://www.ehousestudio.com/contact"
-                                                           style="color: #ffffff; font-size: 12px; text-decoration: none; line-height: 30px; width: 100%;">Get
-                                                            Started</a>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </td>
+                                        <td width="100%" height="65"></td>
                                     </tr>
-                                    <!----------------- End Button Center ----------------->
                                     </tbody>
                                 </table>
-
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <!-- End Wrapper -->
-
-                    <!-- Space -->
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center"
-                           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
-                        <tbody>
-                        <tr>
-                            <td width="100%" height="65"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <!-- End Space -->
+                                <!-- End Space -->
 
                 </div>
             </td>

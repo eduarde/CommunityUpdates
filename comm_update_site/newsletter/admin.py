@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Newsletter, Achievement, AchievementNewslettter, Event, EventNewslettter, Member
+from .models import Newsletter, Achievement, AchievementNewslettter, Event, EventNewslettter, Member, MemberNewsletter
 from grappelli.forms import GrappelliSortableHiddenMixin
 
 
@@ -31,6 +31,14 @@ class EventsInline(GrappelliSortableHiddenMixin, admin.TabularInline):
     extra = 0
 
 
+class MemberInline(GrappelliSortableHiddenMixin, admin.TabularInline):
+    verbose_name = 'Member'
+    verbose_name_plural = 'Members'
+    model = MemberNewsletter
+    sortable_field_name = "order"
+    extra = 0
+
+
 class AchievementsAdmin(TinyMCEMixin, admin.ModelAdmin):
     model = Achievement
     list_display = ('title',)
@@ -42,6 +50,7 @@ class NewsletterAdmin(TinyMCEMixin, admin.ModelAdmin):
     inlines = (
         AchievementsInline,
         EventsInline,
+        MemberInline,
     )
 
 
