@@ -12,6 +12,7 @@ class Newsletter(models.Model):
     image = FileBrowseField('Image', max_length=100, directory="flags",
                             extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
     slug = AutoSlugField(populate_from='title')
+    virtual_tour_link = models.URLField(verbose_name='URL Virtual Tour', blank=True)
 
     def get_absolute_url(self):
         return reverse('newsletter_detail', kwargs={'slug': self.slug})
@@ -29,6 +30,7 @@ class Newsletter(models.Model):
 class SectionAbstract(models.Model):
     title = models.CharField(verbose_name='Title', max_length=140)
     text = models.TextField(verbose_name='text', blank=True)
+    read_more_link = models.URLField(verbose_name='Read More', blank=True)
 
     class Meta:
         abstract = True
