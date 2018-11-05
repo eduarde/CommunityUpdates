@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Newsletter, Achievement, AchievementNewslettter, Event, EventNewslettter
+from .models import Newsletter, Achievement, AchievementNewslettter, Event, EventNewslettter, Member
 from grappelli.forms import GrappelliSortableHiddenMixin
 
 
@@ -50,7 +50,13 @@ class EventsAdmin(TinyMCEMixin, admin.ModelAdmin):
     list_display = ('title',)
 
 
+class MemberAdmin(admin.ModelAdmin):
+    model = Member
+    list_display = ('full_name',)
+
+
 # Register your models here.
 admin.site.register(Newsletter, NewsletterAdmin)
 admin.site.register(Achievement, AchievementsAdmin)
 admin.site.register(Event, EventsAdmin)
+admin.site.register(Member, MemberAdmin)

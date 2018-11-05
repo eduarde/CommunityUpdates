@@ -88,3 +88,20 @@ class Event(SectionAbstract):
     newsletters = models.ManyToManyField(
         'Newsletter', verbose_name="Newsletter",
         through=EventNewslettter, related_name='events', null=True, blank=True)
+
+
+class Member(models.Model):
+    first_name = models.CharField(verbose_name='First Name', max_length=100)
+    last_name = models.CharField(verbose_name='Last Name', max_length=140)
+    photo = FileBrowseField('Photo', max_length=100, directory="photo",
+                            extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    profile_url = models.URLField(verbose_name='UCern Profile URL', blank=True)
+
+    @property
+    def full_name(self):
+        return '{0} {1}'.format(self.first_name, self.last_name)
+
+    def __str__(self):
+        return self.full_name
+
+
