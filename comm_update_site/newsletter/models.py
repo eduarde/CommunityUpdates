@@ -1,5 +1,4 @@
 from django.db import models
-from filebrowser.fields import FileBrowseField
 from django.urls import reverse
 from autoslug import AutoSlugField
 
@@ -9,8 +8,8 @@ class Newsletter(models.Model):
     date = models.DateField(verbose_name='Date')
     lead = models.CharField(verbose_name='Lead', max_length=100)
     text = models.TextField(verbose_name='text', blank=True)
-    image = FileBrowseField('Image', max_length=100, directory="flags",
-                            extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    flag_image = models.URLField(verbose_name='Flag image', help_text="Paste the url of the image", blank=True)
+    image = models.URLField(verbose_name='Image', help_text="Paste the url of the image", blank=True)
     slug = AutoSlugField(populate_from='title')
     virtual_tour_link = models.URLField(verbose_name='URL Virtual Tour', blank=True)
     thank_you_text = models.TextField(verbose_name='Special thank you message', blank=True)
@@ -56,8 +55,7 @@ class AchievementNewslettter(models.Model):
 
 
 class Achievement(SectionAbstract):
-    image = FileBrowseField('Image', max_length=100, directory="achievements",
-                            extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    image = models.URLField(verbose_name='Image', help_text="Paste the url of the image", blank=True)
     newsletters = models.ManyToManyField(
         'Newsletter', verbose_name="Newsletter",
         through=AchievementNewslettter, related_name='achievemnts', null=True, blank=True)
@@ -84,8 +82,7 @@ class EventNewslettter(models.Model):
 
 class Event(SectionAbstract):
     date = models.DateField(verbose_name='Date')
-    image = FileBrowseField('Image', max_length=100, directory="events",
-                            extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    image = models.URLField(verbose_name='Image', help_text="Paste the url of the image", blank=True)
     newsletters = models.ManyToManyField(
         'Newsletter', verbose_name="Newsletter",
         through=EventNewslettter, related_name='events', null=True, blank=True)
@@ -106,8 +103,7 @@ class MemberNewsletter(models.Model):
 class Member(models.Model):
     first_name = models.CharField(verbose_name='First Name', max_length=100)
     last_name = models.CharField(verbose_name='Last Name', max_length=140)
-    photo = FileBrowseField('Photo', max_length=100, directory="photo",
-                            extensions=['.jpg', '.jpeg', '.gif', '.png'], blank=True, null=True)
+    photo = models.URLField(verbose_name='Photo', help_text="Paste the url of the image", blank=True)
     profile_url = models.URLField(verbose_name='UCern Profile URL', blank=True)
     newsletters = models.ManyToManyField(
         'Newsletter', verbose_name="Newsletter",

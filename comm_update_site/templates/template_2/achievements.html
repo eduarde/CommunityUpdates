@@ -1,160 +1,160 @@
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#f7f5f5"
-           style="position: relative; z-index: 0; border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">
-        <tbody>
-        <tr mc:repeatable="">
-            <td width="100%" valign="top" align="center">
+       style="position: relative; z-index: 0; border-color: rgb(255, 255, 255); background-color: rgb(255, 255, 255);">
+    <tbody>
+    <tr mc:repeatable="">
+        <td width="100%" valign="top" align="center">
 
-                <!-- Wrapper -->
-                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
-                    <tbody>
-                    <tr>
-                        <td width="100%" align="center">
+            <!-- Wrapper -->
+            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+                <tbody>
+                <tr>
+                    <td width="100%" align="center">
 
-                            <!-- SORTABLE -->
-                            <div class="sortable_inner ui-sortable">
+                        <!-- SORTABLE -->
+                        <div class="sortable_inner ui-sortable">
+                            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                   style="border-collapse: collapse; position: relative; z-index: 0;" class="full"
+                                   object="drag-module-small">
+                                <tbody>
+                                <tr>
+                                    <td width="100%" height="60"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- Wrapper -->
+                            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                   class="full" object="drag-module-small">
+                                <tbody>
+                                <tr>
+                                    <td width="100%">
+
+                                        <!-- Headline -->
+                                        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
+                                               class="fullCenter">
+                                            <tbody style="border-color: rgb(33, 41, 51);">
+                                            <tr style="border-color: rgb(33, 41, 51);">
+                                                <td valign="middle" width="100%"
+                                                    style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 24px; color: rgb(33, 41, 51); line-height: 30px; font-weight: 700; text-transform: uppercase; border-color: rgb(33, 41, 51);"
+                                                    class="fullCenter" cu-identify="element_039022425515577197"
+                                                    mc:edit="68">Achievements
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="100%" height="15"
+                                                    style="font-size: 1px; line-height: 1px;">&nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="100%" align="center">
+                                                    <table width="89" border="0" cellpadding="0" cellspacing="0"
+                                                           align="center" class="buttonScale">
+                                                        <tbody style="border-color: rgb(182, 114, 225);">
+                                                        <tr style="border-color: rgb(182, 114, 225);">
+                                                            <td width="89" height="1" align="center"
+                                                                style="font-size: 1px; line-height: 1px; border-top-width: 4px; border-top-style: solid; border-color: #1393D2; color: rgb(182, 114, 225);">
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td width="100%" height="55"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <!-- ELEMENT -->
+                            {% for achievement in achievements %}
+                                <!-- Image 600px - 1 -->
                                 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       style="border-collapse: collapse; position: relative; z-index: 0;" class="full"
-                                       object="drag-module-small">
+                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
+                                       class="fullCenter" object="drag-module-small">
                                     <tbody>
                                     <tr>
-                                        <td width="100%" height="60"></td>
+                                        <td width="100%" align="center" class="image600">
+                                            <img
+                                                    src="{{ achievement.image }}"
+                                                    width="600" alt="" border="0" class="hover"
+                                                    cu-identify="element_019406438898295164" mc:edit="69">
+                                        </td>
                                     </tr>
                                     </tbody>
                                 </table>
+                                <div style="display: none;" id="element_015170294092968106"></div>
 
-                                <!-- Wrapper -->
                                 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       class="full" object="drag-module-small">
-                                    <tbody>
+                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
+                                       class="fullCenter" object="drag-module-small">
+                                    <tbody style="border-color: rgb(33, 41, 51);">
                                     <tr>
-                                        <td width="100%">
-
-                                            <!-- Headline -->
-                                            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                                   class="fullCenter">
-                                                <tbody style="border-color: rgb(33, 41, 51);">
-                                                <tr style="border-color: rgb(33, 41, 51);">
-                                                    <td valign="middle" width="100%"
-                                                        style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 24px; color: rgb(33, 41, 51); line-height: 30px; font-weight: 700; text-transform: uppercase; border-color: rgb(33, 41, 51);"
-                                                        class="fullCenter" cu-identify="element_039022425515577197"
-                                                        mc:edit="68">Achievements
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="100%" height="15"
-                                                        style="font-size: 1px; line-height: 1px;">&nbsp;
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="100%" align="center">
-                                                        <table width="89" border="0" cellpadding="0" cellspacing="0"
-                                                               align="center" class="buttonScale">
-                                                            <tbody style="border-color: rgb(182, 114, 225);">
-                                                            <tr style="border-color: rgb(182, 114, 225);">
-                                                                <td width="89" height="1" align="center"
-                                                                    style="font-size: 1px; line-height: 1px; border-top-width: 4px; border-top-style: solid; border-color: #1393D2; color: rgb(182, 114, 225);">
-                                                                    &nbsp;
-                                                                </td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="100%" height="55"></td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
+                                        <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr style="border-color: rgb(33, 41, 51);">
+                                        <td valign="middle" width="100%"
+                                            style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; color: rgb(33, 41, 51); line-height: 24px; font-weight: 700; text-transform: uppercase; border-color: rgb(33, 41, 51);"
+                                            class="fullCenter" mc:edit="70">
+                                            {{ achievement.title|upper }}
                                         </td>
                                     </tr>
                                     </tbody>
                                 </table>
 
-                                <!-- ELEMENT -->
-                                {% for achievement in achievements %}
-                                    <!-- Image 600px - 1 -->
-                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                           class="fullCenter" object="drag-module-small">
-                                        <tbody>
-                                        <tr>
-                                            <td width="100%" align="center" class="image600">
-                                                <img
-                                                        src=" {{ achievement.image.url }}"
-                                                        width="600" alt="" border="0" class="hover"
-                                                        cu-identify="element_019406438898295164" mc:edit="69">
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    <div style="display: none;" id="element_015170294092968106"></div>
+                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
+                                       class="fullCenter" object="drag-module-small">
+                                    <tbody style="border-color: rgb(88, 89, 91);">
+                                    <tr>
+                                        <td width="100%" height="10" style="font-size: 1px; line-height: 1px;">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    <tr style="border-color: rgb(88, 89, 91);">
+                                        <td valign="middle" width="100%"
+                                            style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(88, 89, 91); line-height: 22px; font-weight: 400; border-color: rgb(88, 89, 91);"
+                                            class="fullCenter" mc:edit="71">
+                                            {{ achievement.text|safe }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">
+                                            &nbsp;
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
 
-                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                           class="fullCenter" object="drag-module-small">
-                                        <tbody style="border-color: rgb(33, 41, 51);">
-                                        <tr>
-                                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">
-                                                &nbsp;
-                                            </td>
-                                        </tr>
-                                        <tr style="border-color: rgb(33, 41, 51);">
-                                            <td valign="middle" width="100%"
-                                                style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; color: rgb(33, 41, 51); line-height: 24px; font-weight: 700; text-transform: uppercase; border-color: rgb(33, 41, 51);"
-                                                class="fullCenter" mc:edit="70">
-                                                {{ achievement.title|upper }}
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                {% include "read_more.html" with object=achievement %}
 
-                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                           class="fullCenter" object="drag-module-small">
-                                        <tbody style="border-color: rgb(88, 89, 91);">
-                                        <tr>
-                                            <td width="100%" height="10" style="font-size: 1px; line-height: 1px;">
-                                                &nbsp;
-                                            </td>
-                                        </tr>
-                                        <tr style="border-color: rgb(88, 89, 91);">
-                                            <td valign="middle" width="100%"
-                                                style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(88, 89, 91); line-height: 22px; font-weight: 400; border-color: rgb(88, 89, 91);"
-                                                class="fullCenter" mc:edit="71">
-                                                {{ achievement.text|safe }}
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">
-                                                &nbsp;
-                                            </td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                       class="full" object="drag-module-small">
+                                    <tbody>
+                                    <tr>
+                                        <td width="100%" height="65"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                {#                                    <hr style="width: 100%"/>#}
+                            {% endfor %}
+                        </div>
 
-                                    {% include "read_more.html" with object=achievement %}
-                                    
-                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                           class="full" object="drag-module-small">
-                                        <tbody>
-                                        <tr>
-                                            <td width="100%" height="65"></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                    {#                                    <hr style="width: 100%"/>#}
-                                {% endfor %}
-                            </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <!-- End Wrapper -->
 
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <!-- End Wrapper -->
-
-            </td>
-        </tr>
-        </tbody>
-    </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
