@@ -79,10 +79,10 @@
                                     <tbody>
                                     <tr>
                                         <td width="100%" align="center" class="image600">
-                                            <a href="http://www.ehousestudio.com/blog/how-to-make-the-most-out-of-the-mobile-checkout-experience"><img
-                                                    src="https://gallery.mailchimp.com/f9900021f8f2c976c85ac2565/images/f4756cbe-2eb6-44e6-8ea0-ab9c46af8f33.jpg"
+                                            <img
+                                                    src=" {{ event.image.url }} "
                                                     width="600" alt="" border="0" class="hover"
-                                                    cu-identify="element_019406438898295164" mc:edit="69"></a>
+                                                    cu-identify="element_019406438898295164" mc:edit="69">
                                         </td>
                                     </tr>
                                     </tbody>
@@ -129,7 +129,7 @@
                                     </tbody>
                                 </table>
 
-                                {% include "read_more.html" %}
+                                {% include "read_more.html" with object=event %}
 
                                 <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
                                        class="full" object="drag-module-small">

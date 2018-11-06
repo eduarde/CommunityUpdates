@@ -81,10 +81,10 @@
                                         <tbody>
                                         <tr>
                                             <td width="100%" align="center" class="image600">
-                                                <a href="http://www.ehousestudio.com/blog/how-to-make-the-most-out-of-the-mobile-checkout-experience"><img
-                                                        src="https://images.unsplash.com/photo-1530750463537-af1c747d8d73?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7e6252a08cf41d9b0ed59f08b3456854&auto=format&fit=crop&w=1353&q=80"
+                                                <img
+                                                        src=" {{ achievement.image.url }}"
                                                         width="600" alt="" border="0" class="hover"
-                                                        cu-identify="element_019406438898295164" mc:edit="69"></a>
+                                                        cu-identify="element_019406438898295164" mc:edit="69">
                                             </td>
                                         </tr>
                                         </tbody>
@@ -134,7 +134,7 @@
                                         </tbody>
                                     </table>
 
-                                    {% include "read_more.html" %}
+                                    {% include "read_more.html" with object=achievement %}
                                     
                                     <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
                                            class="full" object="drag-module-small">
