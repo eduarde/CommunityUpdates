@@ -23,6 +23,12 @@ class Newsletter(models.Model):
     def get_achievements(self):
         return self.achievemnts
 
+    def get_members(self):
+        return self.member
+
+    def get_thoughts(self):
+        return self.final_thought
+
     def __str__(self):
         return "{0} - {1}".format(self.title, self.date)
 
@@ -63,6 +69,32 @@ class Achievement(SectionAbstract):
     class Meta:
         verbose_name = 'Achievement'
         verbose_name_plural = 'Achievements'
+
+
+class FinalThoughtNewsletter(models.Model):
+    """
+    Through class to handle relationship between FinalThought and Newsletter models.
+    """
+    finalthought = models.ForeignKey('FinalThought', on_delete=models.CASCADE)
+    newsletter = models.ForeignKey('Newsletter', related_name='newsletter_finalthought', on_delete=models.CASCADE)
+    order = models.PositiveSmallIntegerField()
+
+    class Meta:
+        app_label = 'newsletter'
+        verbose_name = 'Final thought newsletter'
+        verbose_name_plural = 'Final thoughts newsletter'
+        ordering = ('order',)
+
+
+class FinalThought(SectionAbstract):
+    image = models.URLField(verbose_name='Image', help_text="Paste the url of the image", blank=True)
+    newsletters = models.ManyToManyField(
+        'Newsletter', verbose_name="Newsletter",
+        through=FinalThoughtNewsletter, related_name='final_thought', null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Final thought'
+        verbose_name_plural = 'Final thoughts'
 
 
 class EventNewslettter(models.Model):

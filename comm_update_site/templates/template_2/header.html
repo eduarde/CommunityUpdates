@@ -1,11 +1,11 @@
 {% load static %}
 {# -----------   HEADER PATRISIA-----------  #}
-<table width="100%" background="https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Lime%20Green%20Paint-75.jpg" border="0" cellpadding="0" cellspacing="0" align="center" class="full"
-       bgcolor="#B6F137"
-       style="border-color: rgb(33, 41, 51); background-image: url('https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Lime%20Green%20Paint-75.jpg'); table-layout: fixed;">
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" align="center" class="full"
+       bgcolor="#8ac63e"
+       style="border-color: rgb(33, 41, 51); table-layout: fixed;">
     <tbody>
     <tr mc:repeatable="">
-        <td align="center" background="https://images-fibreglast-com.s3.amazonaws.com/pio-resized/750/Single%20Stage%20Lime%20Green%20Paint-75.jpg" id="BGheaderChange">
+        <td align="center" id="BGheaderChange">
 
             <!-- Wrapper -->
             <table class="mobile" align="center" border="0" width="600" cellpadding="0" cellspacing="0">
@@ -44,7 +44,7 @@
                                             <tr>
                                                 <td height="40" valign="middle" align="center" width="100%"
                                                     class="fullCenter" id="logo">
-                                                    <img src="{% static 'img/cerner-white.png' %}"
+                                                    <img src="https://smhttp-ssl-44845.nexcesscdn.net/images/site/article_headers/_normal/2018-01-09-cerner-corp-green.png"
                                                          width="200" alt="" border="0" class="hover"
                                                          cu-identify="element_035130456602200866" mc:edit="1">
                                                 </td>
@@ -154,11 +154,11 @@
                                                object="drag-module-small">
                                             <tbody>
                                             <tr>
-                                                <td style="color: white; text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; line-height: 22px; font-weight: 400; vertical-align: top; font-size: 13px; padding-top: 3px;"
+                                                <td style="color: white; text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; line-height: 22px; font-weight: 600; vertical-align: top; font-size: 20px; padding-top: 3px;"
                                                     class="fullCenter" cu-identify="element_05970657032448798"
                                                     mc:edit="4">
 
-                                                    {{ newsletter.date }}
+                                                    {{ newsletter.date|date:"M d Y" }}
                                                 </td>
                                             </tr>
                                             <tr>

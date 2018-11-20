@@ -585,43 +585,22 @@
                                                                        style="width:100%;  max-width:800px; padding-left: 20px">
                                                                     <tbody>
                                                                     <tr>
-                                                                        <td width="100">
-                                                                            <img
-                                                                                    src="https://images.unsplash.com/photo-1525450280520-7d542a86e065?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4259c07277dbffd4dbef268e24ab7998&auto=format&fit=crop&w=1266&q=80"
-                                                                                    width="auto" height="100"
-                                                                                    alt="Facebook"
-                                                                                    border="0"
-                                                                                    cu-identify="element_00583017878440245986"
-                                                                                    mc:edit="158">
-                                                                        </td>
+                                                                        {% for member in members %}
+                                                                            <td width="100">
+                                                                                <img src="{{ member.photo }}"
+                                                                                     width="auto" height="100"
+                                                                                     border="0"
+                                                                                     cu-identify="element_00583017878440245986"
+                                                                                     mc:edit="158">
+
+                                                                                <div style="text-align: center; width: 100px; margin-top: 10px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 12px; color: #ffffff; line-height: 24px; font-weight: 400;">
+                                                                                    <span>{{ member.full_name|upper }}</span>
+                                                                                </div>
 
 
-                                                                        <td width="100"><img
-                                                                                src="https://images.unsplash.com/photo-1534471770828-9bde524ee634?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=743fd596ea8a9268b5cd9312a247db76&auto=format&fit=crop&w=1266&q=80"
-                                                                                width="auto" height="100"
-                                                                                alt="Facebook"
-                                                                                border="0"
-                                                                                cu-identify="element_0058307878440245986"
-                                                                                mc:edit="154">
-                                                                        </td>
+                                                                            </td>
 
-                                                                        <td width="100"><img
-                                                                                src="https://images.unsplash.com/photo-1520223297779-95bbd1ea79b7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5586e47ae5f95d6efc6518a223a36d8b&auto=format&fit=crop&w=1266&q=80"
-                                                                                width="auto" height="100"
-                                                                                alt="Facebook"
-                                                                                border="0"
-                                                                                cu-identify="element_0058307878440245986"
-                                                                                mc:edit="154">
-                                                                        </td>
-
-                                                                        <td width="100"><img
-                                                                                src="https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1e289110e319d49417dccfc2de46ea3a&auto=format&fit=crop&w=1266&q=80"
-                                                                                width="auto" height="100"
-                                                                                alt="Facebook"
-                                                                                border="0"
-                                                                                cu-identify="element_0058307878440245986"
-                                                                                mc:edit="154">
-                                                                        </td>
+                                                                        {% endfor %}
                                                                     </tr>
                                                                     </tbody>
                                                                 </table>
@@ -688,115 +667,67 @@
                                     </tbody>
                                 </table>
 
-                                <!-- Wrapper -->
-                                <div style="display: none;" id="element_001640146505087614"></div>
+                                {% for thought in final_thoughts %}
 
-                                <!-- Image 600px - 1 -->
-                                {#                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"#}
-                                {#                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"#}
-                                {#                                       class="fullCenter" object="drag-module-small">#}
-                                {#                                    <tbody>#}
-                                {#                                    <tr>#}
-                                {#                                        <td width="100%" align="center" class="image600">#}
-                                {#                                            <a href="http://revolveconference.com/session/you-cant-afford-not-to-prototype/?utm_source=eHouse+Studio+-+Newsletter&amp;utm_campaign=e2bf699b01-eHouse_Blend_0910_15_2015&amp;utm_medium=email&amp;utm_term=0_09b3e1df27-e2bf699b01-"><img#}
-                                {#                                                    src="https://gallery.mailchimp.com/f9900021f8f2c976c85ac2565/images/8f1865c9-9e8f-4484-a344-fd1eb08b9c16.jpg"#}
-                                {#                                                    width="600" alt="" border="0" class="hover"#}
-                                {#                                                    cu-identify="element_0373612102586776" mc:edit="69"></a>#}
-                                {#                                        </td>#}
-                                {#                                    </tr>#}
-                                {#                                    </tbody>#}
-                                {#                                </table>#}
-                                {#                                <div style="display: none;" id="element_015170294092968106"></div>#}
+                                    <!-- Wrapper -->
+                                    <div style="display: none;" id="element_001640146505087614"></div>
 
-                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                       class="fullCenter" object="drag-module-small">
-                                    <tbody style="border-color: rgb(33, 41, 51);">
-                                    <tr>
-                                        <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;
-                                        </td>
-                                    </tr>
-                                    <tr style="border-color: rgb(33, 41, 51);">
-                                        <td valign="middle" width="100%"
-                                            style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; color: rgb(33, 41, 51); line-height: 24px; font-weight: 700; text-transform: uppercase; border-color: rgb(33, 41, 51);"
-                                            class="fullCenter" mc:edit="70">
-                                            UPCOMING EVENTS - EHOUSE AT REVOLVE CONFERENCE
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
+                                           class="fullCenter" object="drag-module-small">
+                                        <tbody style="border-color: rgb(33, 41, 51);">
+                                        <tr>
+                                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr style="border-color: rgb(33, 41, 51);">
+                                            <td valign="middle" width="100%"
+                                                style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 14px; color: rgb(33, 41, 51); line-height: 24px; font-weight: 700; text-transform: uppercase; border-color: rgb(33, 41, 51);"
+                                                class="fullCenter" mc:edit="70">
+                                                {{ thought.title|upper }}
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
 
-                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                       class="fullCenter" object="drag-module-small">
-                                    <tbody style="border-color: rgb(88, 89, 91);">
-                                    <tr>
-                                        <td width="100%" height="10" style="font-size: 1px; line-height: 1px;">&nbsp;
-                                        </td>
-                                    </tr>
-                                    <tr style="border-color: rgb(88, 89, 91);">
-                                        <td valign="middle" width="100%"
-                                            style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(88, 89, 91); line-height: 22px; font-weight: 400; border-color: rgb(88, 89, 91);"
-                                            class="fullCenter" mc:edit="71">
-                                            eHouse's founder and creative director, Aaron Quinn, will be speaking at the
-                                            upcoming Revolve Conference <span class="appleLinksGrey"
-                                                                              style="color: rgb(88, 89, 91); font-size: 13px; text-decoration: none;">on October 29 & 30</span>.
-                                            Revolve self-describes as the "Lowcountry's gathering of designers,
-                                            marketers and entrepreneurs who are influencing what’s next, right now."
-                                            Aaron will be giving a talk on the importance of prototyping as a necessary
-                                            part
-                                            of a successful project strategy and one that you can't afford to skip.
-                                            He'll be speaking <span class="appleLinksGrey"
-                                                                    style="color: rgb(88, 89, 91); font-size: 13px; text-decoration: none;">at 3:30 pm on October 29</span>.
-                                            We'd love to see you there! For more information on the conference and the
-                                            rest of the speakers, visit <a
-                                                href="http://revolveconference.com/?utm_source=eHouse+Studio+-+Newsletter&utm_campaign=e2bf699b01-eHouse_Blend_0910_15_2015&utm_medium=email&utm_term=0_09b3e1df27-e2bf699b01-"
-                                                style="color:rgb(182, 114, 225);">revolveconference.com</a>.
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                           style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
+                                           class="fullCenter" object="drag-module-small">
+                                        <tbody style="border-color: rgb(88, 89, 91);">
+                                        <tr>
+                                            <td width="100%" height="10" style="font-size: 1px; line-height: 1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        <tr style="border-color: rgb(88, 89, 91);">
+                                            <td valign="middle" width="100%"
+                                                style="text-align: center; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(88, 89, 91); line-height: 22px; font-weight: 400; border-color: rgb(88, 89, 91);"
+                                                class="fullCenter" mc:edit="71">
+                                                {{ thought.text|safe }}
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">
+                                                &nbsp;
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
 
-                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;"
-                                       class="fullCenter" object="drag-module-small">
-                                    <!----------------- Button Center ----------------->
-                                    <tbody>
-                                    <tr>
-                                        <td align="center" class="buttonScale">
-                                            <table border="0" cellpadding="0" cellspacing="0" align="center"
-                                                   class="buttonScale">
-                                                <tbody style="border-color: rgb(182, 114, 225);">
-                                                <tr style="border-color: rgb(182, 114, 225);">
-                                                    <td align="center" height="34" bgcolor="#eb3b4a"
-                                                        style="border-radius: 3px; padding-left: 20px; padding-right: 20px; letter-spacing: 1px; font-weight: 700; font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: rgb(255, 255, 255); text-transform: uppercase; border-color: rgb(182, 114, 225); background-color: rgb(182, 114, 225);font-size:12px;"
-                                                        mc:edit="72">
 
-                                                        <a href="http://revolveconference.com/session/you-cant-afford-not-to-prototype/?utm_source=eHouse+Studio+-+Newsletter&amp;utm_campaign=e2bf699b01-eHouse_Blend_0910_15_2015&amp;utm_medium=email&amp;utm_term=0_09b3e1df27-e2bf699b01-"
-                                                           style="color:#ffffff;font-size:12px;text-decoration:none;line-height:30px;width:100%"
-                                                           target="_blank">Read more</a>
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <!----------------- End Button Center ----------------->
-                                    </tbody>
-                                </table>
+                                    {% include "read_more.html" with object=thought %}
 
-                                <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
-                                       class="full" object="drag-module-small">
-                                    <tbody>
-                                    <tr>
-                                        <td width="100%" height="65"></td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center"
+                                           class="full" object="drag-module-small">
+                                        <tbody>
+                                        <tr>
+                                            <td width="100%" height="65"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                {% endfor %}
                             </div>
 
                         </td>

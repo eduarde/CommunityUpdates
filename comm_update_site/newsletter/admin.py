@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Newsletter, Achievement, AchievementNewslettter, Event, EventNewslettter, Member, MemberNewsletter
+from .models import Newsletter, Achievement, AchievementNewslettter, Event, EventNewslettter, Member, MemberNewsletter, \
+    FinalThought, FinalThoughtNewsletter
 from grappelli.forms import GrappelliSortableHiddenMixin
 
 
@@ -19,6 +20,14 @@ class AchievementsInline(GrappelliSortableHiddenMixin, admin.TabularInline):
     verbose_name = 'Achievement'
     verbose_name_plural = 'Achievements'
     model = AchievementNewslettter
+    sortable_field_name = "order"
+    extra = 0
+
+
+class FinalThoughtInline(GrappelliSortableHiddenMixin, admin.TabularInline):
+    verbose_name = 'Final Thought'
+    verbose_name_plural = 'Final Thoughts'
+    model = FinalThoughtNewsletter
     sortable_field_name = "order"
     extra = 0
 
@@ -44,6 +53,11 @@ class AchievementsAdmin(TinyMCEMixin, admin.ModelAdmin):
     list_display = ('title',)
 
 
+class FinalThoughtAdmin(TinyMCEMixin, admin.ModelAdmin):
+    model = FinalThought
+    list_display = ('title',)
+
+
 class NewsletterAdmin(TinyMCEMixin, admin.ModelAdmin):
     model = Newsletter
     list_display = ('title', 'date')
@@ -51,6 +65,7 @@ class NewsletterAdmin(TinyMCEMixin, admin.ModelAdmin):
         AchievementsInline,
         EventsInline,
         MemberInline,
+        FinalThoughtInline,
     )
 
 
@@ -69,3 +84,4 @@ admin.site.register(Newsletter, NewsletterAdmin)
 admin.site.register(Achievement, AchievementsAdmin)
 admin.site.register(Event, EventsAdmin)
 admin.site.register(Member, MemberAdmin)
+admin.site.register(FinalThought,FinalThoughtAdmin)
