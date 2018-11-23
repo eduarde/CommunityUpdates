@@ -21,6 +21,7 @@ from django.conf.urls import include, url
 from filebrowser.sites import site
 
 urlpatterns = [
+    # path('accounts/', include('django.contrib.auth.urls')),
     path('admin/', admin.site.urls),
     url(r'^grappelli/', include('grappelli.urls')),
     path('admin/filebrowser/', site.urls),
